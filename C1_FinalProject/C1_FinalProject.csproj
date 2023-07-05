@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apoteker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apoteker.Designer.cs">
+      <DependentUpon>apoteker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

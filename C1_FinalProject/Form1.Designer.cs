@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Apotek_5arah));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.apotekerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pemasokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gudangPengimporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,11 +53,47 @@
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.apotekerToolStripMenuItem,
+            this.pelangganToolStripMenuItem,
+            this.pemasokToolStripMenuItem,
+            this.obatToolStripMenuItem,
+            this.gudangPengimporanToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // apotekerToolStripMenuItem
+            // 
+            this.apotekerToolStripMenuItem.Name = "apotekerToolStripMenuItem";
+            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.apotekerToolStripMenuItem.Text = "apoteker";
+            // 
+            // pelangganToolStripMenuItem
+            // 
+            this.pelangganToolStripMenuItem.Name = "pelangganToolStripMenuItem";
+            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.pelangganToolStripMenuItem.Text = "pelanggan";
+            // 
+            // pemasokToolStripMenuItem
+            // 
+            this.pemasokToolStripMenuItem.Name = "pemasokToolStripMenuItem";
+            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.pemasokToolStripMenuItem.Text = "pemasok";
+            // 
+            // obatToolStripMenuItem
+            // 
+            this.obatToolStripMenuItem.Name = "obatToolStripMenuItem";
+            this.obatToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.obatToolStripMenuItem.Text = "obat";
+            // 
+            // gudangPengimporanToolStripMenuItem
+            // 
+            this.gudangPengimporanToolStripMenuItem.Name = "gudangPengimporanToolStripMenuItem";
+            this.gudangPengimporanToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.gudangPengimporanToolStripMenuItem.Text = "gudang pengimporan";
             // 
             // Apotek_5arah
             // 
@@ -74,6 +115,11 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem apotekerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pelangganToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pemasokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem obatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gudangPengimporanToolStripMenuItem;
     }
 }
 
