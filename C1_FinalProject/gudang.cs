@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace C1_FinalProject
 {
-    public partial class apoteker : Form
+    public partial class gudang : Form
     {
-        public apoteker()
+        public gudang()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void apoteker_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

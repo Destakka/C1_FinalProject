@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,10 +59,49 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="gudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gudang.Designer.cs">
+      <DependentUpon>gudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="obat.Designer.cs">
+      <DependentUpon>obat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pelanggan.Designer.cs">
+      <DependentUpon>pelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pemasok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pemasok.Designer.cs">
+      <DependentUpon>pemasok.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="apoteker.resx">
+      <DependentUpon>apoteker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gudang.resx">
+      <DependentUpon>gudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obat.resx">
+      <DependentUpon>obat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pelanggan.resx">
+      <DependentUpon>pelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pemasok.resx">
+      <DependentUpon>pemasok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +125,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apotek2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apotek_1-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47e2ca2d9aa0e1f31d529e945a95ea46-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
