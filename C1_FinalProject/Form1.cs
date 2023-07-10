@@ -29,17 +29,23 @@ namespace C1_FinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            apoteker fm = new apoteker();
+            fm.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            pemasok fm = new pemasok();
+            fm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            gudang fm = new gudang();
+            fm.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,6 +59,35 @@ namespace C1_FinalProject
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            obat fm = new obat();
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pelanggan fm = new pelanggan();
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
 
         }
