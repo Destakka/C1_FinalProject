@@ -36,5 +36,33 @@ namespace C1_FinalProject
         {
 
         }
+
+        private void apotekerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            apoteker fm = new apoteker();
+            fm.Show();
+            this.Hide();
+        }
+
+        private void obatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            obat fm = new obat();
+            fm.Show();
+            this.Hide();
+        }
+
+        private void gudangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gudang fm = new gudang();
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pemasokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pemasok fm = new pemasok();
+            fm.Show();
+            this.Hide();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(obat));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +47,14 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.apotekerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pemasokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -206,11 +214,64 @@
             this.textBox5.TabIndex = 19;
             this.textBox5.Text = "Pusat Data Obat";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.TabIndex = 20;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.apotekerToolStripMenuItem,
+            this.pelangganToolStripMenuItem,
+            this.gudangToolStripMenuItem,
+            this.pemasokToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 24);
+            this.toolStripDropDownButton1.Text = "Home";
+            // 
+            // apotekerToolStripMenuItem
+            // 
+            this.apotekerToolStripMenuItem.Name = "apotekerToolStripMenuItem";
+            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apotekerToolStripMenuItem.Text = "Apoteker";
+            this.apotekerToolStripMenuItem.Click += new System.EventHandler(this.apotekerToolStripMenuItem_Click);
+            // 
+            // pelangganToolStripMenuItem
+            // 
+            this.pelangganToolStripMenuItem.Name = "pelangganToolStripMenuItem";
+            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pelangganToolStripMenuItem.Text = "Pelanggan";
+            this.pelangganToolStripMenuItem.Click += new System.EventHandler(this.pelangganToolStripMenuItem_Click);
+            // 
+            // gudangToolStripMenuItem
+            // 
+            this.gudangToolStripMenuItem.Name = "gudangToolStripMenuItem";
+            this.gudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gudangToolStripMenuItem.Text = "Gudang";
+            this.gudangToolStripMenuItem.Click += new System.EventHandler(this.gudangToolStripMenuItem_Click);
+            // 
+            // pemasokToolStripMenuItem
+            // 
+            this.pemasokToolStripMenuItem.Name = "pemasokToolStripMenuItem";
+            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pemasokToolStripMenuItem.Text = "Pemasok";
+            this.pemasokToolStripMenuItem.Click += new System.EventHandler(this.pemasokToolStripMenuItem_Click);
+            // 
             // obat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnSave);
@@ -221,6 +282,8 @@
             this.Text = "obat";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +307,11 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem apotekerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pelangganToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gudangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pemasokToolStripMenuItem;
     }
 }

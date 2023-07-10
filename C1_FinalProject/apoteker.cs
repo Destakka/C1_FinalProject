@@ -40,7 +40,7 @@ namespace C1_FinalProject
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.apoteker";
+            string str = "select nama_apoteker from dbo.apoteker";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
