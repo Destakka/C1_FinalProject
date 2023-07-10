@@ -103,6 +103,7 @@
             this.idA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.idA.Size = new System.Drawing.Size(337, 22);
             this.idA.TabIndex = 5;
+            this.idA.TextChanged += new System.EventHandler(this.idA_TextChanged);
             // 
             // wkA
             // 

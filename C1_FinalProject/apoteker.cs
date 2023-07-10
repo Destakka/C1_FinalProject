@@ -148,5 +148,10 @@ namespace C1_FinalProject
         {
 
         }
+
+        private void idA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
