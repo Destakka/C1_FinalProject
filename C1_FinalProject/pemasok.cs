@@ -36,7 +36,7 @@ namespace C1_FinalProject
         }
         private void DataGridView()
         {
-            
+
         }
 
 
@@ -104,7 +104,36 @@ namespace C1_FinalProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            string idpemasok = idPem.Text;
+            string nmpemasok = nmPem.Text;
+            string telppemasok = telpPem.Text;
+            string produkpemasok = prdP.Text;
+            string alamatpemasok = almtPem.Text;
+            if (idpemasok == "")
+            {
+                MessageBox.Show("Masukkan Id Pemasok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nmpemasok == "")
+            {
+                MessageBox.Show("Masukkan Nama Pemasok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (telppemasok == "")
+            {
+                MessageBox.Show("Masukkan No Telpon Pemasok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (produkpemasok == "")
+            {
+                MessageBox.Show("Masukkan Produk Pemasok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (alamatpemasok == "")
+            {
+                MessageBox.Show("Masukkan Alamat Pemasok", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
 
+
+            }
         }
     }
 }
