@@ -15,8 +15,8 @@ namespace C1_FinalProject
     {
         private string stringConnection = "data source=LAPTOP-8VUKFT0D\\DESTAKKA;" + "database = apotek_5arah; User ID = sa; Password=Desta21";
         private SqlConnection koneksi;
-        private string id, nmobat, kandunganobt, merkobt;
-        private DateTime expobt;
+        private string idpel, nmpel, telppel, jkpel;
+        private DateTime tglbeli;
         public pelanggan()
         {
             InitializeComponent();
