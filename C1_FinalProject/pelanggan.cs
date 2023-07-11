@@ -32,9 +32,17 @@ namespace C1_FinalProject
             
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            idP.Enabled = true;
+            nmP.Enabled = true;
+            telpP.Enabled = true;
+            datebeli.Enabled = true;
+            jkP.Enabled = true;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSave.Enabled = true;
+            btnDisplay.Enabled = true;
         }
 
         private void apotekerToolStripMenuItem_Click(object sender, EventArgs e)
