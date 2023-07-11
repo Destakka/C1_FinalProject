@@ -40,7 +40,7 @@
             this.idO = new System.Windows.Forms.TextBox();
             this.kandungan = new System.Windows.Forms.TextBox();
             this.merk = new System.Windows.Forms.TextBox();
-            this.exp = new System.Windows.Forms.DateTimePicker();
+            this.dateexp = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -140,19 +140,19 @@
             this.merk.TabIndex = 12;
             this.merk.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // exp
+            // dateexp
             // 
-            this.exp.Location = new System.Drawing.Point(133, 157);
-            this.exp.Name = "exp";
-            this.exp.Size = new System.Drawing.Size(419, 22);
-            this.exp.TabIndex = 13;
+            this.dateexp.Location = new System.Drawing.Point(133, 157);
+            this.dateexp.Name = "dateexp";
+            this.dateexp.Size = new System.Drawing.Size(419, 22);
+            this.dateexp.TabIndex = 13;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.54369F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.45631F));
-            this.tableLayoutPanel1.Controls.Add(this.exp, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.dateexp, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.idO, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.merk, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.nmO, 1, 1);
@@ -181,6 +181,7 @@
             this.btnDisplay.TabIndex = 18;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // textBox5
             // 
@@ -198,7 +199,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(913, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(913, 31);
             this.toolStrip1.TabIndex = 20;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -212,7 +213,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 28);
             this.toolStripDropDownButton1.Text = "Home";
             // 
             // apotekerToolStripMenuItem
@@ -252,6 +253,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(388, 152);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAdd
             // 
@@ -330,7 +332,7 @@
         private System.Windows.Forms.TextBox idO;
         private System.Windows.Forms.TextBox kandungan;
         private System.Windows.Forms.TextBox merk;
-        private System.Windows.Forms.DateTimePicker exp;
+        private System.Windows.Forms.DateTimePicker dateexp;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.TextBox textBox5;

@@ -204,6 +204,7 @@
             this.btnDisplay.TabIndex = 23;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // dataGridView1
             // 

@@ -15,8 +15,8 @@ namespace C1_FinalProject
     {
         private string stringConnection = "data source=LAPTOP-8VUKFT0D\\DESTAKKA;" + "database = apotek_5arah; User ID = sa; Password=Desta21";
         private SqlConnection koneksi;
-        private string id, nmobat, kandunganobt, merkobt, expobt;
-        private DateTime tgl;
+        private string id, nmobat, kandunganobt, merkobt;
+        private DateTime expobt;
         public obat()
         {
             InitializeComponent();
@@ -34,15 +34,27 @@ namespace C1_FinalProject
             nmO.Text = "";
             kandungan.Text = "";
             merk.Text = "";
-            exp.Text = "";
+            dateexp.Text = "";
             idO.Enabled = false;
             nmO.Enabled = false;
             kandungan.Enabled = false;
             merk.Enabled = false;
-            exp.Enabled = false;
+            dateexp.Enabled = false;
+            btnAdd.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
+        private void DataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_obat from dbo.obat";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
 
         private void pelangganToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -82,64 +94,61 @@ namespace C1_FinalProject
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            DataGridView();
+            btnDisplay.Enabled = false;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string idobat = idO.Text.Trim();
-            string nmobat = nmO.Text.Trim();
-            string kandunganobat = kandungan.Text.Trim();
-            string merkobat = merk.Text.Trim();
-            string expobat = exp.Text.Trim();
-            if (idobat == "")
+            id = idO.Text.Trim();
+            nmobat = nmO.Text.Trim();
+            kandunganobt = kandungan.Text.Trim();
+            merkobt = merk.Text.Trim();
+            expobt = dateexp.Value;
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nmobat) || string.IsNullOrEmpty(kandunganobt) || string.IsNullOrEmpty(merkobt))
             {
-                MessageBox.Show("Masukkan Id Obat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all identity fields!");
             }
-            if (nmobat == "")
-            {
-                MessageBox.Show("Masukkan Nama Obat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            if (kandunganobat == "")
-            {
-                MessageBox.Show("Masukkan Kandungan Obat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            if (merkobat == "")
-            {
-                MessageBox.Show("Masukkan Merk Obat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            if (expobat == "")
-            {
-                MessageBox.Show("Masukkan Expired", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
             else
             {
                 koneksi.Open();
                 string str = "insert into dbo.obat (id_obat, nama_bat, kandungan, merk, expired_date)" + "values(@id_obat, @nama_bat, @kandungan, @merk, @expired_date)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_obat", idobat));
-                cmd.Parameters.Add(new SqlParameter("@nama_bat", nmobat));
-                cmd.Parameters.Add(new SqlParameter("@kandungan", kandunganobat));
-                cmd.Parameters.Add(new SqlParameter("@merk", merkobat));
-                cmd.Parameters.Add(new SqlParameter("@expired_date", expobat));
+                cmd.Parameters.AddWithValue("@id_obat", id);
+                cmd.Parameters.AddWithValue("@nama_bat", nmobat);
+                cmd.Parameters.AddWithValue("@kandungan", kandunganobt);
+                cmd.Parameters.AddWithValue("@merk", merkobt);
+                cmd.Parameters.AddWithValue("@expired_date", expobt);
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 refreshform();
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            dateexp.Value = DateTime.Today;
             idO.Enabled = true;
             nmO.Enabled = true;
             kandungan.Enabled = true;
             merk.Enabled = true;
-            exp.Enabled = true;
+            dateexp.Enabled = true;
             btnAdd.Enabled = true;
             btnDelete.Enabled = true;
             btnSave.Enabled = true;
             btnDisplay.Enabled = true;
+
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

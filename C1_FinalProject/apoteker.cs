@@ -40,7 +40,7 @@ namespace C1_FinalProject
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select nama_apoteker from dbo.apoteker";
+            string str = "select id_apoteker from dbo.apoteker";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -152,6 +152,12 @@ namespace C1_FinalProject
         private void idA_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            DataGridView();
+            btnDisplay.Enabled = false;
         }
     }
 }
