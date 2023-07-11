@@ -44,5 +44,35 @@ namespace C1_FinalProject
             fm.Show();
             this.Hide();
         }
+
+        private void pemasok_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

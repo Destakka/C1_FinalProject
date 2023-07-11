@@ -41,7 +41,7 @@ namespace C1_FinalProject
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select id_obat from dbo.gudang_pengimporan";
+            string str = "select id_gudang from dbo.gudang_pengimporan";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -96,7 +96,7 @@ namespace C1_FinalProject
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_gudang", idgudang));
                 cmd.Parameters.Add(new SqlParameter("@nama_gudang", nmgudang));
-                cmd.Parameters.Add(new SqlParameter("@stock_obat", stockob));
+                cmd.Parameters.Add(new SqlParameter("@stok_obat", stockob));
                 cmd.Parameters.Add(new SqlParameter("@kode_rak", koderak));
                 cmd.Parameters.Add(new SqlParameter("@obat_masuk", obatmasuk));
                 cmd.ExecuteNonQuery();
