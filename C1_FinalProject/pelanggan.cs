@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace C1_FinalProject
 {
     public partial class pelanggan : Form
     {
+        private string stringConnection = "data source=LAPTOP-8VUKFT0D\\DESTAKKA;" + "database = apotek_5arah; User ID = sa; Password=Desta21";
+        private SqlConnection koneksi;
+        private string id, nmobat, kandunganobt, merkobt;
+        private DateTime expobt;
         public pelanggan()
         {
             InitializeComponent();

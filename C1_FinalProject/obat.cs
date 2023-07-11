@@ -15,7 +15,7 @@ namespace C1_FinalProject
     {
         private string stringConnection = "data source=LAPTOP-8VUKFT0D\\DESTAKKA;" + "database = apotek_5arah; User ID = sa; Password=Desta21";
         private SqlConnection koneksi;
-        private string id, nmobat, kandunganobt, merkobt;
+        private string idobt, nmobat, kandunganobt, merkobt;
         private DateTime expobt;
         public obat()
         {
@@ -107,12 +107,12 @@ namespace C1_FinalProject
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            id = idO.Text.Trim();
+            idobt = idO.Text.Trim();
             nmobat = nmO.Text.Trim();
             kandunganobt = kandungan.Text.Trim();
             merkobt = merk.Text.Trim();
             expobt = dateexp.Value;
-            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nmobat) || string.IsNullOrEmpty(kandunganobt) || string.IsNullOrEmpty(merkobt))
+            if (string.IsNullOrEmpty(idobt) || string.IsNullOrEmpty(nmobat) || string.IsNullOrEmpty(kandunganobt) || string.IsNullOrEmpty(merkobt))
             {
                 MessageBox.Show("Please fill in all identity fields!");
             }
@@ -122,7 +122,7 @@ namespace C1_FinalProject
                 koneksi.Open();
                 string str = "insert into dbo.obat (id_obat, nama_bat, kandungan, merk, expired_date)" + "values(@id_obat, @nama_bat, @kandungan, @merk, @expired_date)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.Parameters.AddWithValue("@id_obat", id);
+                cmd.Parameters.AddWithValue("@id_obat", idobt);
                 cmd.Parameters.AddWithValue("@nama_bat", nmobat);
                 cmd.Parameters.AddWithValue("@kandungan", kandunganobt);
                 cmd.Parameters.AddWithValue("@merk", merkobt);
