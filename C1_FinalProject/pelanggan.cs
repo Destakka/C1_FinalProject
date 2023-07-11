@@ -20,6 +20,24 @@ namespace C1_FinalProject
         public pelanggan()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
+        }
+        private void refreshform()
+        {
+            idP.Text = "";
+            nmP.Text = "";
+            telpP.Text = "";
+            jkP.Text = "";
+            datebeli.Text = "";
+            idP.Enabled = false;
+            nmP.Enabled = false;
+            telpP.Enabled = false;
+            jkP.Enabled = false;
+            datebeli.Enabled = false;
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
