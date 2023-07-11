@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(apoteker));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,8 +46,15 @@
             this.btnDisplay = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.obatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pemasokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -209,7 +217,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(220, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(219, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -227,12 +235,65 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.refreshform_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.TabIndex = 26;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.obatToolStripMenuItem,
+            this.pelangganToolStripMenuItem,
+            this.gudangToolStripMenuItem,
+            this.pemasokToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 28);
+            this.toolStripDropDownButton1.Text = "Home";
+            // 
+            // obatToolStripMenuItem
+            // 
+            this.obatToolStripMenuItem.Name = "obatToolStripMenuItem";
+            this.obatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.obatToolStripMenuItem.Text = "Obat";
+            this.obatToolStripMenuItem.Click += new System.EventHandler(this.obatToolStripMenuItem_Click);
+            // 
+            // pelangganToolStripMenuItem
+            // 
+            this.pelangganToolStripMenuItem.Name = "pelangganToolStripMenuItem";
+            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pelangganToolStripMenuItem.Text = "Pelanggan";
+            this.pelangganToolStripMenuItem.Click += new System.EventHandler(this.pelangganToolStripMenuItem_Click);
+            // 
+            // gudangToolStripMenuItem
+            // 
+            this.gudangToolStripMenuItem.Name = "gudangToolStripMenuItem";
+            this.gudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gudangToolStripMenuItem.Text = "Gudang";
+            this.gudangToolStripMenuItem.Click += new System.EventHandler(this.gudangToolStripMenuItem_Click);
+            // 
+            // pemasokToolStripMenuItem
+            // 
+            this.pemasokToolStripMenuItem.Name = "pemasokToolStripMenuItem";
+            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pemasokToolStripMenuItem.Text = "Pemasok";
+            this.pemasokToolStripMenuItem.Click += new System.EventHandler(this.pemasokToolStripMenuItem_Click);
+            // 
             // apoteker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDisplay);
@@ -246,7 +307,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,5 +333,11 @@
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem obatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pelangganToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gudangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pemasokToolStripMenuItem;
     }
 }
