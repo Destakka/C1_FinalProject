@@ -39,6 +39,16 @@ namespace C1_FinalProject
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
+        private void DataGridView()
+        {
+            koneksi.Open();
+            string str = "select id_pelanggan from dbo.pelanggann";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -90,13 +100,13 @@ namespace C1_FinalProject
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.pelanggan (id_pelanggan, nama_pelanggan, no_telp, tanggal_beli, jenis_kelamin)" + "values(@id_pelanggan, @nama_pelanggan, @no_telp, @tanggal_beli, @jenis_kelamin)";
+                string str = "insert into dbo.pelanggann (id_pelanggan, nama_pelanggan, no_telepon, tanggal_beli, jenis_kelamin)" + "values(@id_pelanggan, @nama_pelanggan, @no_telepon, @tanggal_beli, @jenis_kelamin)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.Parameters.AddWithValue("@id_pelanggan", idpel);
                 cmd.Parameters.AddWithValue("@nama_pelanggan", nmpel);
-                cmd.Parameters.AddWithValue("@no_telp", telppel);
-                cmd.Parameters.AddWithValue("@tanggal_beli", jkpel);
-                cmd.Parameters.AddWithValue("@jenis_kelamin", tglbeli);
+                cmd.Parameters.AddWithValue("@no_telepon", telppel);
+                cmd.Parameters.AddWithValue("@tanggal_beli", tglbeli);
+                cmd.Parameters.AddWithValue("@jenis_kelamin", jkpel);
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -104,6 +114,12 @@ namespace C1_FinalProject
 
                 refreshform();
             }
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            DataGridView();
+            btnDisplay.Enabled = false;
         }
 
         private void obatToolStripMenuItem_Click(object sender, EventArgs e)

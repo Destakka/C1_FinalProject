@@ -131,5 +131,10 @@ namespace C1_FinalProject
             fm.Show();
             this.Hide();
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
