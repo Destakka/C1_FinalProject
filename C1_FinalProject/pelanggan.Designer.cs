@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.jkP = new System.Windows.Forms.ComboBox();
+            this.datebeli = new System.Windows.Forms.DateTimePicker();
+            this.idP = new System.Windows.Forms.TextBox();
+            this.nmP = new System.Windows.Forms.TextBox();
+            this.telpP = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -104,41 +104,41 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Jenis Kelamin";
             // 
-            // comboBox1
+            // jkP
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(171, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(387, 24);
-            this.comboBox1.TabIndex = 5;
+            this.jkP.FormattingEnabled = true;
+            this.jkP.Location = new System.Drawing.Point(171, 161);
+            this.jkP.Name = "jkP";
+            this.jkP.Size = new System.Drawing.Size(387, 24);
+            this.jkP.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // datebeli
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(387, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.datebeli.Location = new System.Drawing.Point(171, 121);
+            this.datebeli.Name = "datebeli";
+            this.datebeli.Size = new System.Drawing.Size(387, 22);
+            this.datebeli.TabIndex = 6;
             // 
-            // textBox1
+            // idP
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 22);
-            this.textBox1.TabIndex = 7;
+            this.idP.Location = new System.Drawing.Point(171, 3);
+            this.idP.Name = "idP";
+            this.idP.Size = new System.Drawing.Size(387, 22);
+            this.idP.TabIndex = 7;
             // 
-            // textBox2
+            // nmP
             // 
-            this.textBox2.Location = new System.Drawing.Point(171, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 22);
-            this.textBox2.TabIndex = 8;
+            this.nmP.Location = new System.Drawing.Point(171, 49);
+            this.nmP.Name = "nmP";
+            this.nmP.Size = new System.Drawing.Size(387, 22);
+            this.nmP.TabIndex = 8;
             // 
-            // textBox3
+            // telpP
             // 
-            this.textBox3.Location = new System.Drawing.Point(171, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 22);
-            this.textBox3.TabIndex = 9;
+            this.telpP.Location = new System.Drawing.Point(171, 86);
+            this.telpP.Name = "telpP";
+            this.telpP.Size = new System.Drawing.Size(387, 22);
+            this.telpP.TabIndex = 9;
             // 
             // tableLayoutPanel1
             // 
@@ -146,13 +146,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.80435F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.19566F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.jkP, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.datebeli, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.telpP, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.idP, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nmP, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(85, 180);
@@ -306,11 +306,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox jkP;
+        private System.Windows.Forms.DateTimePicker datebeli;
+        private System.Windows.Forms.TextBox idP;
+        private System.Windows.Forms.TextBox nmP;
+        private System.Windows.Forms.TextBox telpP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.ToolStrip toolStrip1;

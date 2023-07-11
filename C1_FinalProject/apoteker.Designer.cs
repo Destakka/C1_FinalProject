@@ -122,7 +122,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.50544F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.49456F));
-            this.tableLayoutPanel1.Controls.Add(this.idA, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.almtA, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.wkA, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.nmA, 1, 1);
@@ -132,6 +131,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.idA, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(165, 195);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
