@@ -15,7 +15,30 @@ namespace C1_FinalProject
         public pemasok()
         {
             InitializeComponent();
+            refreshform();
+
         }
+        private void refreshform()
+        {
+            idPem.Text = "";
+            nmPem.Text = "";
+            telpPem.Text = "";
+            prdP.Text = "";
+            almtPem.Text = "";
+            idPem.Enabled = false;
+            nmPem.Enabled = false;
+            telpPem.Enabled = false;
+            prdP.Enabled = false;
+            almtPem.Enabled = false;
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+        }
+        private void DataGridView()
+        {
+            
+        }
+
 
         private void apotekerToolStripMenuItem_Click(object sender, EventArgs e)
         {
