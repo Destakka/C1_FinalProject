@@ -49,5 +49,18 @@ namespace C1_FinalProject
             fm.Show();
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            idG.Enabled = true;
+            nmG.Enabled = true;
+            stockobat.Enabled = true;
+            KodeR.Enabled = true;
+            obatM.Enabled = true;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSave.Enabled = true;
+            btnDisplay.Enabled = true;
+        }
     }
 }

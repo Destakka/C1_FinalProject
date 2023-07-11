@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.idG = new System.Windows.Forms.TextBox();
+            this.nmG = new System.Windows.Forms.TextBox();
+            this.stockobat = new System.Windows.Forms.TextBox();
+            this.KodeR = new System.Windows.Forms.TextBox();
+            this.obatM = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -99,51 +99,51 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Obat Masuk";
             // 
-            // textBox1
+            // idG
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(353, 22);
-            this.textBox1.TabIndex = 5;
+            this.idG.Location = new System.Drawing.Point(185, 3);
+            this.idG.Name = "idG";
+            this.idG.Size = new System.Drawing.Size(353, 22);
+            this.idG.TabIndex = 5;
             // 
-            // textBox2
+            // nmG
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(353, 22);
-            this.textBox2.TabIndex = 6;
+            this.nmG.Location = new System.Drawing.Point(185, 40);
+            this.nmG.Name = "nmG";
+            this.nmG.Size = new System.Drawing.Size(353, 22);
+            this.nmG.TabIndex = 6;
             // 
-            // textBox3
+            // stockobat
             // 
-            this.textBox3.Location = new System.Drawing.Point(185, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(353, 22);
-            this.textBox3.TabIndex = 7;
+            this.stockobat.Location = new System.Drawing.Point(185, 77);
+            this.stockobat.Name = "stockobat";
+            this.stockobat.Size = new System.Drawing.Size(353, 22);
+            this.stockobat.TabIndex = 7;
             // 
-            // textBox4
+            // KodeR
             // 
-            this.textBox4.Location = new System.Drawing.Point(185, 114);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(353, 22);
-            this.textBox4.TabIndex = 8;
+            this.KodeR.Location = new System.Drawing.Point(185, 114);
+            this.KodeR.Name = "KodeR";
+            this.KodeR.Size = new System.Drawing.Size(353, 22);
+            this.KodeR.TabIndex = 8;
             // 
-            // textBox5
+            // obatM
             // 
-            this.textBox5.Location = new System.Drawing.Point(185, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(353, 22);
-            this.textBox5.TabIndex = 9;
+            this.obatM.Location = new System.Drawing.Point(185, 149);
+            this.obatM.Name = "obatM";
+            this.obatM.Size = new System.Drawing.Size(353, 22);
+            this.obatM.TabIndex = 9;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.79888F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.20112F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.obatM, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.idG, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.KodeR, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nmG, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.stockobat, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 96);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -191,6 +191,7 @@
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // toolStrip1
             // 
@@ -219,28 +220,28 @@
             // apotekerToolStripMenuItem
             // 
             this.apotekerToolStripMenuItem.Name = "apotekerToolStripMenuItem";
-            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.apotekerToolStripMenuItem.Text = "Apoteker";
             this.apotekerToolStripMenuItem.Click += new System.EventHandler(this.apotekerToolStripMenuItem_Click);
             // 
             // obatToolStripMenuItem
             // 
             this.obatToolStripMenuItem.Name = "obatToolStripMenuItem";
-            this.obatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.obatToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.obatToolStripMenuItem.Text = "Obat";
             this.obatToolStripMenuItem.Click += new System.EventHandler(this.obatToolStripMenuItem_Click);
             // 
             // pelangganToolStripMenuItem
             // 
             this.pelangganToolStripMenuItem.Name = "pelangganToolStripMenuItem";
-            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pelangganToolStripMenuItem.Text = "Pelanggan";
             this.pelangganToolStripMenuItem.Click += new System.EventHandler(this.pelangganToolStripMenuItem_Click);
             // 
             // pemasokToolStripMenuItem
             // 
             this.pemasokToolStripMenuItem.Name = "pemasokToolStripMenuItem";
-            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pemasokToolStripMenuItem.Text = "Pemasok";
             this.pemasokToolStripMenuItem.Click += new System.EventHandler(this.pemasokToolStripMenuItem_Click);
             // 
@@ -278,11 +279,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox idG;
+        private System.Windows.Forms.TextBox nmG;
+        private System.Windows.Forms.TextBox stockobat;
+        private System.Windows.Forms.TextBox KodeR;
+        private System.Windows.Forms.TextBox obatM;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnDelete;
