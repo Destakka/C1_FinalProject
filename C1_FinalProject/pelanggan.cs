@@ -75,6 +75,37 @@ namespace C1_FinalProject
             this.Hide();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            idpel = idP.Text.Trim();
+            nmpel = nmP.Text.Trim();
+            telppel = telpP.Text.Trim();
+            jkpel = jkP.Text.Trim();
+            tglbeli = datebeli.Value;
+            if (string.IsNullOrEmpty(idpel) || string.IsNullOrEmpty(nmpel) || string.IsNullOrEmpty(telppel) || string.IsNullOrEmpty(jkpel))
+            {
+                MessageBox.Show("Please fill in all identity fields!");
+            }
+
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.pelanggan (id_pelanggan, nama_pelanggan, no_telp, tanggal_beli, jenis_kelamin)" + "values(@id_pelanggan, @nama_pelanggan, @no_telp, @tanggal_beli, @jenis_kelamin)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.Parameters.AddWithValue("@id_pelanggan", idpel);
+                cmd.Parameters.AddWithValue("@nama_pelanggan", nmpel);
+                cmd.Parameters.AddWithValue("@no_telp", telppel);
+                cmd.Parameters.AddWithValue("@tanggal_beli", jkpel);
+                cmd.Parameters.AddWithValue("@jenis_kelamin", tglbeli);
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                refreshform();
+            }
+        }
+
         private void obatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             obat fm = new obat();
