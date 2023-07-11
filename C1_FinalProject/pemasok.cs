@@ -85,6 +85,15 @@ namespace C1_FinalProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            idPem.Enabled = true;
+            nmPem.Enabled = true;
+            telpPem.Enabled = true;
+            prdP.Enabled = true;
+            almtPem.Enabled = true;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSave.Enabled = true;
+            btnDisplay.Enabled = true;
 
         }
 
