@@ -122,6 +122,7 @@
             this.telpPem.Name = "telpPem";
             this.telpPem.Size = new System.Drawing.Size(392, 22);
             this.telpPem.TabIndex = 7;
+            this.telpPem.TextChanged += new System.EventHandler(this.telpPem_TextChanged);
             // 
             // prdP
             // 

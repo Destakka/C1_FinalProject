@@ -40,7 +40,7 @@ namespace C1_FinalProject
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select id_apoteker from dbo.apoteker";
+            string str = "select*from apoteker)";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -93,7 +93,7 @@ namespace C1_FinalProject
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.apoteker (id_apoteker, nama_apoteker, no_telp, waktu_kerja, alamat_apoteker)" + "values(@id_apoteker, @nama_apoteker, @no_telp, @waktu_kerja, @alamat_apoteker)";
+                string str = "select*from apoteker)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_apoteker", idapoteker));

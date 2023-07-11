@@ -47,7 +47,7 @@ namespace C1_FinalProject
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select id_obat from dbo.obat";
+            string str = "select*from obat";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -120,7 +120,7 @@ namespace C1_FinalProject
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.obat (id_obat, nama_bat, kandungan, merk, expired_date)" + "values(@id_obat, @nama_bat, @kandungan, @merk, @expired_date)";
+                string str = "select*from obat";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.Parameters.AddWithValue("@id_obat", idobt);
                 cmd.Parameters.AddWithValue("@nama_bat", nmobat);

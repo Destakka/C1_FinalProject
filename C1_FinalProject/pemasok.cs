@@ -90,6 +90,11 @@ namespace C1_FinalProject
 
         }
 
+        private void telpPem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 

@@ -107,6 +107,9 @@
             // jkP
             // 
             this.jkP.FormattingEnabled = true;
+            this.jkP.Items.AddRange(new object[] {
+            "L",
+            "P"});
             this.jkP.Location = new System.Drawing.Point(171, 161);
             this.jkP.Name = "jkP";
             this.jkP.Size = new System.Drawing.Size(387, 24);

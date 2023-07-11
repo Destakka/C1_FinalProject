@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,12 +38,12 @@ namespace C1_FinalProject
             datebeli.Enabled = false;
             btnAdd.Enabled = true;
             btnSave.Enabled = false;
-            btnClear.Enabled = false;
+            btnClear.Enabled = true;
         }
         private void DataGridView()
         {
             koneksi.Open();
-            string str = "select id_pelanggan from dbo.pelanggann";
+            string str = "select*from pelanggan";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -100,7 +101,7 @@ namespace C1_FinalProject
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.pelanggann (id_pelanggan, nama_pelanggan, no_telepon, tanggal_beli, jenis_kelamin)" + "values(@id_pelanggan, @nama_pelanggan, @no_telepon, @tanggal_beli, @jenis_kelamin)";
+                string str = "select*from pelanggan";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.Parameters.AddWithValue("@id_pelanggan", idpel);
                 cmd.Parameters.AddWithValue("@nama_pelanggan", nmpel);
