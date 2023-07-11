@@ -40,18 +40,20 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.apotekerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pemasokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -152,7 +154,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(96, 80);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(85, 180);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6962F));
@@ -163,42 +165,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 200);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(535, 330);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 38);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(391, 330);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 38);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(702, 40);
+            this.btnDisplay.Location = new System.Drawing.Point(702, 180);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(86, 38);
             this.btnDisplay.TabIndex = 18;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(249, 330);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 38);
-            this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.button4_Click);
             // 
             // toolStrip1
             // 
@@ -207,7 +181,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
             this.toolStrip1.TabIndex = 20;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -221,47 +195,86 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(84, 24);
             this.toolStripDropDownButton1.Text = "Home";
             // 
             // apotekerToolStripMenuItem
             // 
             this.apotekerToolStripMenuItem.Name = "apotekerToolStripMenuItem";
-            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apotekerToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.apotekerToolStripMenuItem.Text = "Apoteker";
             this.apotekerToolStripMenuItem.Click += new System.EventHandler(this.apotekerToolStripMenuItem_Click);
             // 
             // obatToolStripMenuItem
             // 
             this.obatToolStripMenuItem.Name = "obatToolStripMenuItem";
-            this.obatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.obatToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.obatToolStripMenuItem.Text = "Obat";
             this.obatToolStripMenuItem.Click += new System.EventHandler(this.obatToolStripMenuItem_Click);
             // 
             // gudangToolStripMenuItem
             // 
             this.gudangToolStripMenuItem.Name = "gudangToolStripMenuItem";
-            this.gudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gudangToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.gudangToolStripMenuItem.Text = "Gudang";
             this.gudangToolStripMenuItem.Click += new System.EventHandler(this.gudangToolStripMenuItem_Click);
             // 
             // pemasokToolStripMenuItem
             // 
             this.pemasokToolStripMenuItem.Name = "pemasokToolStripMenuItem";
-            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pemasokToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.pemasokToolStripMenuItem.Text = "Pemasok";
             this.pemasokToolStripMenuItem.Click += new System.EventHandler(this.pemasokToolStripMenuItem_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(476, 400);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 38);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(332, 400);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(86, 38);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Save";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(190, 400);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(86, 38);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Add";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(244, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(294, 150);
+            this.dataGridView1.TabIndex = 21;
             // 
             // pelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.btnDisplay);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "pelanggan";
             this.Text = "pelanggan";
@@ -269,6 +282,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,15 +301,16 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDisplay;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem apotekerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gudangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pemasokToolStripMenuItem;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
